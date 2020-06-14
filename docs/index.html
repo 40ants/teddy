@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>teddy | Documentation</title>
+    
+    
+    <meta name="og:title" property="og:title" content="teddy | Documentation">
+    <meta property="og:type" content="website">
+    
+    
+    
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,400italic,900,900italic">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./highlight-theme-lovelace.css">
+    </head>
+  <body>
+    <div class="top-menu">
+    <a href="#">teddy</a>
+    <input type="text" placeholder="Search...">
+  </div>
+    <div>
+  <header class="hero">
+  <div class="hero-content">
+  <h1>TEDDY</h1>
+  <p></p>
+  </div>
+  </header>
+  <aside>
+  <nav class="nav-table-of-contents">
+  <h5>Table of Contents ⟶</h5>
+  <ul>
+  <li><a href="#">teddy/utils</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-utils::ensure-vector-1">ensure-vector</a></li>
+<li><a href="#teddy-utils::infer-type-2">infer-type</a></li>
+<li><a href="#teddy-utils::vector-to-list-3">vector-to-list</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#">teddy/data-frame</a><ul><li><a href="#">Classes</a><ul><li><a href="#teddy-data-frame:data-frame-4">data-frame</a></li>
+</ul></li>
+<li><a href="#">Functions</a><ul><li><a href="#teddy-data-frame:as-list-5">as-list</a></li>
+<li><a href="#teddy-data-frame:column-idx-6">column-idx</a></li>
+<li><a href="#teddy-data-frame:get-column-7">get-column</a></li>
+<li><a href="#teddy-data-frame:head-8">head</a></li>
+<li><a href="#teddy-data-frame:make-data-frame-9">make-data-frame</a></li>
+<li><a href="#teddy-data-frame:make-iterator-10">make-iterator</a></li>
+<li><a href="#teddy-data-frame:num-columns-11">num-columns</a></li>
+<li><a href="#teddy-data-frame:num-rows-12">num-rows</a></li>
+<li><a href="#teddy-data-frame:slice-13">slice</a></li>
+<li><a href="#teddy-data-frame:tail-14">tail</a></li>
+</ul></li>
+<li><a href="#">Generic-Function-Node</a><ul><li><a href="#teddy-data-frame:scalar-15">scalar</a></li>
+</ul></li>
+<li><a href="#">Methods</a><ul><li><a href="#teddy-data-frame:scalar-16">scalar</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#">teddy/index</a><ul><li><a href="#">Classes</a><ul><li><a href="#teddy-index::index-17">index</a></li>
+</ul></li>
+<li><a href="#">Functions</a><ul><li><a href="#teddy-index:make-index-18">make-index</a></li>
+<li><a href="#teddy-index::row-index-19">row-index</a></li>
+</ul></li>
+<li><a href="#">Methods</a><ul><li><a href="#teddy-index:scalar-20">scalar</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#">teddy/stats</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-stats:stats-21">stats</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#">teddy/plot</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-plot:plot-22">plot</a></li>
+<li><a href="#teddy-plot:plot-timeseries-23">plot-timeseries</a></li>
+</ul></li>
+</ul></li>
+
+  </ul>
+  </nav>
+  </aside>
+
+  <main>
+  <div class="main-content">
+  <div class="readme">
+  <p>I want you to meet Teddy.</p>
+
+<p><img src="teddy-bear.png" alt="" /></p>
+
+<p>Teddy wanna be like pandas. Pandas are cool. Teddy want be cool too!</p>
+
+<p>Here some docs will be going.</p><div class="highlight"><pre><span></span><span class="nv">CL-USER&gt;</span> <span class="p">(</span><span class="nv">teddy/data-frame:make-data-frame</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;Integers&quot;</span> <span class="s">&quot;Floats&quot;</span><span class="p">)</span>
+                                           <span class="ss">:rows</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">repeat</span> <span class="mi">10</span>
+                                                       <span class="nv">collect</span> <span class="p">(</span><span class="nb">list</span> <span class="p">(</span><span class="nb">random</span> <span class="mi">100</span><span class="p">)</span>
+                                                                     <span class="p">(</span><span class="nb">random</span> <span class="mf">1.0</span><span class="p">))))</span>
+<span class="nv">+----------+--------+</span>
+<span class="nv">| Integers |</span> <span class="nv">Floats</span> <span class="nv">|</span>
+<span class="nv">+----------+--------+</span>
+<span class="nv">|</span>       <span class="mi">50</span> <span class="nv">|   0.23 |</span>
+<span class="nv">|       98 |</span>   <span class="mf">0.04</span> <span class="nv">|</span>
+<span class="nv">|</span>       <span class="mi">89</span> <span class="nv">|   0.73 |</span>
+<span class="nv">|       65 |</span>   <span class="mf">0.20</span> <span class="nv">|</span>
+<span class="nv">|</span>       <span class="mi">85</span> <span class="nv">|   0.82 |</span>
+<span class="nv">|       78 |</span>   <span class="mf">0.22</span> <span class="nv">|</span>
+<span class="nv">|</span>       <span class="mi">94</span> <span class="nv">|   0.51 |</span>
+<span class="nv">|       25 |</span>   <span class="mf">0.07</span> <span class="nv">|</span>
+<span class="nv">|</span>       <span class="mi">67</span> <span class="nv">|   0.01 |</span>
+<span class="nv">|       51 |</span>   <span class="mf">0.53</span> <span class="nv">|</span>
+<span class="nv">+----------+--------+</span>
+
+<span class="nv">CL-USER&gt; (teddy/data-frame:stats *)</span>
+<span class="nv">+----------+------+------+-------+------+------+-------+-------+------+</span>
+<span class="nv">|</span> <span class="nv">Column</span>   <span class="nv">| Min  |</span> <span class="nv">p25</span>  <span class="nv">| p50   |</span> <span class="nv">p75</span>  <span class="nv">| Max  |</span> <span class="nv">Mean</span>  <span class="nv">| SD    |</span> <span class="nv">Sum</span>  <span class="nv">|</span>
+<span class="nv">+----------+------+------+-------+------+------+-------+-------+------+</span>
+<span class="nv">|</span> <span class="nv">Integers</span> <span class="nv">|   25 |</span>   <span class="mi">51</span> <span class="nv">| 72.50 |</span>   <span class="mi">89</span> <span class="nv">|   98 |</span> <span class="mf">70.20</span> <span class="nv">| 23.17 |</span>  <span class="mi">702</span> <span class="nv">|</span>
+<span class="nv">|</span> <span class="nv">Floats</span>   <span class="nv">| 0.01 |</span> <span class="mf">0.07</span> <span class="nv">|  0.23 |</span> <span class="mf">0.53</span> <span class="nv">| 0.82 |</span>  <span class="mf">0.34</span> <span class="nv">|  0.29 |</span> <span class="mf">3.35</span> <span class="err">|</span>
+<span class="nv">+----------+------+------+-------+------+------+-------+-------+------+</span>
+</pre></div>
+
+  </div>
+  
+  <div class="api-docs">
+  <h1>API Documentation</h1>
+  <h3>Package: TEDDY/UTILS</h3>
+<h4>Functions</h4>
+<div>
+  <h5 id="teddy-utils::ensure-vector-1">
+  ensure-vector <span class="lambda-parameters"><span class="parenthesis">(</span> obj <span class="symbol">&key</span> element-type <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-utils::infer-type-2">
+  infer-type <span class="lambda-parameters"><span class="parenthesis">(</span> value <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-utils::vector-to-list-3">
+  vector-to-list <span class="lambda-parameters"><span class="parenthesis">(</span> vector <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<h3>Package: TEDDY/DATA-FRAME</h3>
+<h4>Classes</h4>
+<div>
+  <h5 id="teddy-data-frame:data-frame-4">
+  data-frame
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<h4>Functions</h4>
+<div>
+  <h5 id="teddy-data-frame:as-list-5">
+  as-list <span class="lambda-parameters"><span class="parenthesis">(</span> vector <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:column-idx-6">
+  column-idx <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame name <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns a number of the column</p>
+
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:get-column-7">
+  get-column <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame name <span class="symbol">&key</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> as <span class="keyword">:vector</span> <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns column by name</p>
+
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:head-8">
+  head <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="symbol">&optional</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> rows 10 <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:make-data-frame-9">
+  make-data-frame <span class="lambda-parameters"><span class="parenthesis">(</span> column-names <span class="symbol">&key</span> rows columns types <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:make-iterator-10">
+  make-iterator <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns a function from zero arguments which will return
+   a next row on each call. When all rows will be returned,
+   iterator will return nil.</p>
+
+<p>Rows are returned as lists.</p>
+
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:num-columns-11">
+  num-columns <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:num-rows-12">
+  num-rows <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:slice-13">
+  slice <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="symbol">&key</span> columns from to <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame:tail-14">
+  tail <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="symbol">&optional</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> rows 10 <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<h4>Generic-function-node</h4>
+<div>
+  <h5 id="teddy-data-frame:scalar-15">
+  scalar <span class="lambda-parameters"><span class="parenthesis">(</span> obj row-idx column-name <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns a cell content corresponding to the row-idx and column-name.</p>
+
+  </p>
+  </div>
+<h4>Methods</h4>
+<div>
+  <h5 id="teddy-data-frame:scalar-16">
+  scalar <span class="lambda-parameters"><span class="parenthesis">(</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> data-frame data-frame <span class="parenthesis"> <span class="parenthesis">)</span></span></span> row-idx column-name <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns a cell content corresponding to the row-idx and column-name.</p>
+
+  </p>
+  </div>
+<h3>Package: TEDDY/INDEX</h3>
+<h4>Classes</h4>
+<div>
+  <h5 id="teddy-index::index-17">
+  index
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<h4>Functions</h4>
+<div>
+  <h5 id="teddy-index:make-index-18">
+  make-index <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame column <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-index::row-index-19">
+  row-index <span class="lambda-parameters"><span class="parenthesis">(</span> index value <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Internal function to getting the row index by the value.</p>
+
+  </p>
+  </div>
+<h4>Methods</h4>
+<div>
+  <h5 id="teddy-index:scalar-20">
+  scalar <span class="lambda-parameters"><span class="parenthesis">(</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> index index <span class="parenthesis"> <span class="parenthesis">)</span></span></span> value column-name <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns a cell content corresponding to the value and column-name.</p>
+
+  </p>
+  </div>
+<h3>Package: TEDDY/STATS</h3>
+<h4>Functions</h4>
+<div>
+  <h5 id="teddy-stats:stats-21">
+  stats <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Returns a new dataframe where each column holds
+   different stats on corresponding columns
+   from original data-frame.</p>
+
+  </p>
+  </div>
+<h3>Package: TEDDY/PLOT</h3>
+<h4>Functions</h4>
+<div>
+  <h5 id="teddy-plot:plot-22">
+  plot <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame output <span class="symbol">&key</span> title debug <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-plot:plot-timeseries-23">
+  plot-timeseries <span class="lambda-parameters"><span class="parenthesis">(</span> dataframe output <span class="symbol">&key</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> x "date" <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> y "prof .25" <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+
+  </div>
+  </div>
+  </main>
+  </div>
+  </body>
+</html>

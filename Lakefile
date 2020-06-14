@@ -1,0 +1,21 @@
+#|-*- mode:lisp -*-|#
+;; (in-package :cl-user)
+(defpackage :lake.user
+  (:use :cl :lake :cl-syntax)
+  (:shadowing-import-from :lake
+                          :directory))
+(in-package :lake.user)
+
+(use-syntax :interpol)
+
+
+(task "lint" ()
+      (sh "qlot exec sblint"))
+
+
+(task "build-docs" ()
+      (sh "qlot exec ros run --eval '(push \"../litterae/\" asdf:*central-registry*)' --eval '(ql:quickload :litterae)' --eval '(litterae:generate :teddy :path \"docs/\")' --quit"))
+
+
+(task "default" ("build-docs")
+      ())
