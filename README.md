@@ -144,7 +144,7 @@ Row: (9 7 0.85732913 5.310498824093041d0)
 # Plotting data
 
 Plotting facilities as rudimentary. All functions related to plotting
-are in the ~teddy/plot~ package. Right now ~GNUPlot~ is used via
+are in the `teddy/plot` package. Right now `GNUPlot` is used via
 [eazy-gnuplot](http://quickdocs.org/eazy-gnuplot/) library.
 
 Here is how we can plot our data from all columns:
@@ -155,6 +155,7 @@ POFTHEDAY> (teddy/plot:plot *d*
             "docs/media/0099/simple-plot.png")
 ```
 
+![](simple-plot.png)
 ![](docs/simple-plot.png)
 
 If we want to plot only gaussian, then it will be wrong, because we need
@@ -167,9 +168,10 @@ POFTHEDAY> (teddy/plot:plot
             "docs/media/0099/gaussian.png")
 ```
 
+![](gaussian.png)
 ![](docs/gaussian.png)
 
-Another type of plots ~Teddy~ is able to render right now is a
+Another type of plots `Teddy` is able to render right now is a
 "timeseries":
 
 ```lisp
@@ -191,6 +193,7 @@ POFTHEDAY> (teddy/plot:plot-timeseries
 "docs/media/0099/moscow.png"
 ```
 
+![](moscow.png)
 ![](docs/moscow.png)
 
 Join the effort to make Teddy really useful for data analysis!

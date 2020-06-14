@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>teddy | Documentation</title>
-    
+    <meta name="description" content="A data framework for Common Lisp, wanna be like Pandas for Python.">
     
     <meta name="og:title" property="og:title" content="teddy | Documentation">
     <meta property="og:type" content="website">
-    
+    <meta name="og:description" content="A data framework for Common Lisp, wanna be like Pandas for Python.">
     
     
 
@@ -25,7 +25,7 @@
   <header class="hero">
   <div class="hero-content">
   <h1>TEDDY</h1>
-  <p></p>
+  <p>A data framework for Common Lisp, wanna be like Pandas for Python.</p>
   </div>
   </header>
   <aside>
@@ -37,37 +37,39 @@
 <li><a href="#teddy-utils::vector-to-list-3">vector-to-list</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#">teddy/data-frame</a><ul><li><a href="#">Classes</a><ul><li><a href="#teddy-data-frame:data-frame-4">data-frame</a></li>
+<li><a href="#">teddy/data-frame</a><ul><li><a href="#">Classes</a><ul><li><a href="#teddy-data-frame::data-frame-4">data-frame</a></li>
 </ul></li>
-<li><a href="#">Functions</a><ul><li><a href="#teddy-data-frame:as-list-5">as-list</a></li>
-<li><a href="#teddy-data-frame:column-idx-6">column-idx</a></li>
-<li><a href="#teddy-data-frame:get-column-7">get-column</a></li>
-<li><a href="#teddy-data-frame:head-8">head</a></li>
-<li><a href="#teddy-data-frame:make-data-frame-9">make-data-frame</a></li>
-<li><a href="#teddy-data-frame:make-iterator-10">make-iterator</a></li>
-<li><a href="#teddy-data-frame:num-columns-11">num-columns</a></li>
-<li><a href="#teddy-data-frame:num-rows-12">num-rows</a></li>
-<li><a href="#teddy-data-frame:slice-13">slice</a></li>
-<li><a href="#teddy-data-frame:tail-14">tail</a></li>
+<li><a href="#">Functions</a><ul><li><a href="#teddy-data-frame::column-idx-5">column-idx</a></li>
+<li><a href="#teddy-data-frame::get-column-6">get-column</a></li>
+<li><a href="#teddy-data-frame::head-7">head</a></li>
+<li><a href="#teddy-data-frame::make-data-frame-8">make-data-frame</a></li>
+<li><a href="#teddy-data-frame::make-iterator-9">make-iterator</a></li>
+<li><a href="#teddy-data-frame::make-value-formatter-10">make-value-formatter</a></li>
+<li><a href="#teddy-data-frame::num-columns-11">num-columns</a></li>
+<li><a href="#teddy-data-frame::num-rows-12">num-rows</a></li>
+<li><a href="#teddy-data-frame:set-num-digits-after-point-13">set-num-digits-after-point</a></li>
+<li><a href="#teddy-data-frame::slice-14">slice</a></li>
+<li><a href="#teddy-data-frame::tail-15">tail</a></li>
 </ul></li>
-<li><a href="#">Generic-Function-Node</a><ul><li><a href="#teddy-data-frame:scalar-15">scalar</a></li>
+<li><a href="#">Generic-Function-Node</a><ul><li><a href="#teddy-data-frame::scalar-16">scalar</a></li>
 </ul></li>
-<li><a href="#">Methods</a><ul><li><a href="#teddy-data-frame:scalar-16">scalar</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#">teddy/index</a><ul><li><a href="#">Classes</a><ul><li><a href="#teddy-index::index-17">index</a></li>
-</ul></li>
-<li><a href="#">Functions</a><ul><li><a href="#teddy-index:make-index-18">make-index</a></li>
-<li><a href="#teddy-index::row-index-19">row-index</a></li>
-</ul></li>
-<li><a href="#">Methods</a><ul><li><a href="#teddy-index:scalar-20">scalar</a></li>
+<li><a href="#">Methods</a><ul><li><a href="#teddy-data-frame::scalar-17">scalar</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#">teddy/stats</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-stats:stats-21">stats</a></li>
+<li><a href="#">teddy/index</a><ul><li><a href="#">Classes</a><ul><li><a href="#teddy-index::index-18">index</a></li>
+</ul></li>
+<li><a href="#">Functions</a><ul><li><a href="#teddy-index:make-index-19">make-index</a></li>
+<li><a href="#teddy-index::row-index-20">row-index</a></li>
+</ul></li>
+<li><a href="#">Methods</a><ul><li><a href="#teddy-index:scalar-21">scalar</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#">teddy/plot</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-plot:plot-22">plot</a></li>
-<li><a href="#teddy-plot:plot-timeseries-23">plot-timeseries</a></li>
+<li><a href="#">teddy/stats</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-stats:stats-22">stats</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#">teddy/plot</a><ul><li><a href="#">Functions</a><ul><li><a href="#teddy-plot::filename-&gt;terminal-23">filename-&gt;terminal</a></li>
+<li><a href="#teddy-plot:plot-24">plot</a></li>
+<li><a href="#teddy-plot:plot-timeseries-25">plot-timeseries</a></li>
 </ul></li>
 </ul></li>
 
@@ -78,39 +80,194 @@
   <main>
   <div class="main-content">
   <div class="readme">
-  <p>I want you to meet Teddy.</p>
+  <p>I want you to meet Teddy. Teddy wanna be like pandas. Pandas are cool. Teddy want be cool too!</p>
 
-<p><img src="teddy-bear.png" alt="" /></p>
+<p><img src="teddy-bear.png" alt="" />
+<img src="docs/teddy-bear.png" alt="" /></p>
 
-<p>Teddy wanna be like pandas. Pandas are cool. Teddy want be cool too!</p>
+<h1>Reasoning</h1>
 
-<p>Here some docs will be going.</p><div class="highlight"><pre><span></span><span class="nv">CL-USER&gt;</span> <span class="p">(</span><span class="nv">teddy/data-frame:make-data-frame</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;Integers&quot;</span> <span class="s">&quot;Floats&quot;</span><span class="p">)</span>
-                                           <span class="ss">:rows</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">repeat</span> <span class="mi">10</span>
-                                                       <span class="nv">collect</span> <span class="p">(</span><span class="nb">list</span> <span class="p">(</span><span class="nb">random</span> <span class="mi">100</span><span class="p">)</span>
-                                                                     <span class="p">(</span><span class="nb">random</span> <span class="mf">1.0</span><span class="p">))))</span>
-<span class="nv">+----------+--------+</span>
-<span class="nv">| Integers |</span> <span class="nv">Floats</span> <span class="nv">|</span>
-<span class="nv">+----------+--------+</span>
-<span class="nv">|</span>       <span class="mi">50</span> <span class="nv">|   0.23 |</span>
-<span class="nv">|       98 |</span>   <span class="mf">0.04</span> <span class="nv">|</span>
-<span class="nv">|</span>       <span class="mi">89</span> <span class="nv">|   0.73 |</span>
-<span class="nv">|       65 |</span>   <span class="mf">0.20</span> <span class="nv">|</span>
-<span class="nv">|</span>       <span class="mi">85</span> <span class="nv">|   0.82 |</span>
-<span class="nv">|       78 |</span>   <span class="mf">0.22</span> <span class="nv">|</span>
-<span class="nv">|</span>       <span class="mi">94</span> <span class="nv">|   0.51 |</span>
-<span class="nv">|       25 |</span>   <span class="mf">0.07</span> <span class="nv">|</span>
-<span class="nv">|</span>       <span class="mi">67</span> <span class="nv">|   0.01 |</span>
-<span class="nv">|       51 |</span>   <span class="mf">0.53</span> <span class="nv">|</span>
-<span class="nv">+----------+--------+</span>
+<p>This library provides some Common Lisp facitilies to work with data frames.</p>
 
-<span class="nv">CL-USER&gt; (teddy/data-frame:stats *)</span>
-<span class="nv">+----------+------+------+-------+------+------+-------+-------+------+</span>
-<span class="nv">|</span> <span class="nv">Column</span>   <span class="nv">| Min  |</span> <span class="nv">p25</span>  <span class="nv">| p50   |</span> <span class="nv">p75</span>  <span class="nv">| Max  |</span> <span class="nv">Mean</span>  <span class="nv">| SD    |</span> <span class="nv">Sum</span>  <span class="nv">|</span>
-<span class="nv">+----------+------+------+-------+------+------+-------+-------+------+</span>
-<span class="nv">|</span> <span class="nv">Integers</span> <span class="nv">|   25 |</span>   <span class="mi">51</span> <span class="nv">| 72.50 |</span>   <span class="mi">89</span> <span class="nv">|   98 |</span> <span class="mf">70.20</span> <span class="nv">| 23.17 |</span>  <span class="mi">702</span> <span class="nv">|</span>
-<span class="nv">|</span> <span class="nv">Floats</span>   <span class="nv">| 0.01 |</span> <span class="mf">0.07</span> <span class="nv">|  0.23 |</span> <span class="mf">0.53</span> <span class="nv">| 0.82 |</span>  <span class="mf">0.34</span> <span class="nv">|  0.29 |</span> <span class="mf">3.35</span> <span class="err">|</span>
-<span class="nv">+----------+------+------+-------+------+------+-------+-------+------+</span>
+<p>Common Lisp already has <a href="https://github.com/numcl/numcl" >numcl</a> to operate on arrays, and now we need
+a more abstract tool to work with data like data sheets.</p>
+
+<p>Teddy make it possible to define a dataframe full of data, to slice it in different ways, to join data frames
+and see some statistics about the data.</p>
+
+<p>This is a proof of the concept and API will be changed. Check the
+<a href="ChangeLog.md" >ChangeLog.md</a> to learn about new abilities and refactoring details.</p>
+
+<h1>How to create a data-frame</h1>
+
+<p>Here is how we can create a simple data-frame:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/data-frame:make-data-frame</span>
+            <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;Idx&quot;</span> <span class="s">&quot;Integers&quot;</span> <span class="s">&quot;Uniform floats&quot;</span> <span class="s">&quot;Gaussian&quot;</span><span class="p">)</span>
+            <span class="ss">:rows</span>
+            <span class="p">(</span><span class="nb">loop</span> <span class="nv">repeat</span> <span class="mi">10</span>
+                  <span class="nv">for</span> <span class="nv">idx</span> <span class="nv">upfrom</span> <span class="mi">0</span>
+                  <span class="nv">collect</span> <span class="p">(</span><span class="nb">list</span> <span class="nv">idx</span>
+                                <span class="p">(</span><span class="nb">random</span> <span class="mi">100</span><span class="p">)</span>
+                                <span class="p">(</span><span class="nb">random</span> <span class="mf">1.0</span><span class="p">)</span>
+                                <span class="p">(</span><span class="nv">statistics:random-normal</span>
+                                 <span class="ss">:mean</span> <span class="mf">5.0</span>
+                                 <span class="ss">:sd</span> <span class="mf">0.2</span><span class="p">))))</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">| Idx |</span> <span class="nv">Integers</span> <span class="nv">| Uniform floats |</span> <span class="nv">Gaussian</span> <span class="nv">|</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">|</span>   <span class="mi">0</span> <span class="nv">|       41 |</span>           <span class="mf">0.27</span> <span class="nv">|   4.89d0 |</span>
+<span class="nv">|   1 |</span>       <span class="mi">98</span> <span class="nv">|           0.08 |</span>   <span class="mf">4.93d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">2</span> <span class="nv">|        8 |</span>           <span class="mf">0.45</span> <span class="nv">|   5.15d0 |</span>
+<span class="nv">|   3 |</span>       <span class="mi">56</span> <span class="nv">|           0.63 |</span>   <span class="mf">4.87d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">4</span> <span class="nv">|       79 |</span>           <span class="mf">0.42</span> <span class="nv">|   4.72d0 |</span>
+<span class="nv">|   5 |</span>       <span class="mi">19</span> <span class="nv">|           0.04 |</span>   <span class="mf">4.73d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">6</span> <span class="nv">|        1 |</span>           <span class="mf">0.34</span> <span class="nv">|   4.93d0 |</span>
+<span class="nv">|   7 |</span>       <span class="mi">79</span> <span class="nv">|           0.60 |</span>   <span class="mf">5.25d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">8</span> <span class="nv">|       42 |</span>           <span class="mf">0.08</span> <span class="nv">|   5.10d0 |</span>
+<span class="nv">|   9 |</span>        <span class="mi">7</span> <span class="nv">|           0.86 |</span>   <span class="mf">5.31d0</span> <span class="err">|</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
 </pre></div>
+
+
+<h1>Data manipulation</h1>
+
+<p>Now we can slice it by columns, rows or both:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/data-frame:head</span> <span class="vg">*d*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">| Idx |</span> <span class="nv">Integers</span> <span class="nv">| Uniform floats |</span> <span class="nv">Gaussian</span> <span class="nv">|</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">|</span>   <span class="mi">0</span> <span class="nv">|       41 |</span>           <span class="mf">0.27</span> <span class="nv">|   4.89d0 |</span>
+<span class="nv">|   1 |</span>       <span class="mi">98</span> <span class="nv">|           0.08 |</span>   <span class="mf">4.93d0</span> <span class="nv">|</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">POFTHEDAY&gt; (teddy/data-frame:tail *d* 2)</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">|</span> <span class="nv">Idx</span> <span class="nv">| Integers |</span> <span class="nv">Uniform</span> <span class="nv">floats</span> <span class="nv">| Gaussian |</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">|   8 |</span>       <span class="mi">42</span> <span class="nv">|           0.08 |</span>   <span class="mf">5.10d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">9</span> <span class="nv">|        7 |</span>           <span class="mf">0.86</span> <span class="nv">|   5.31d0 |</span>
+<span class="nv">+-----+----------+----------------+----------+</span>
+<span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/data-frame:slice</span>
+            <span class="vg">*d*</span>
+            <span class="ss">:columns</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;idx&quot;</span> <span class="s">&quot;gaussian&quot;</span><span class="p">))</span>
+<span class="nv">+-----+----------+</span>
+<span class="nv">| Idx |</span> <span class="nv">Gaussian</span> <span class="nv">|</span>
+<span class="nv">+-----+----------+</span>
+<span class="nv">|</span>   <span class="mi">0</span> <span class="nv">|   4.89d0 |</span>
+<span class="nv">|   1 |</span>   <span class="mf">4.93d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">2</span> <span class="nv">|   5.15d0 |</span>
+<span class="nv">|   3 |</span>   <span class="mf">4.87d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">4</span> <span class="nv">|   4.72d0 |</span>
+<span class="nv">|   5 |</span>   <span class="mf">4.73d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">6</span> <span class="nv">|   4.93d0 |</span>
+<span class="nv">|   7 |</span>   <span class="mf">5.25d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">8</span> <span class="nv">|   5.10d0 |</span>
+<span class="nv">|   9 |</span>   <span class="mf">5.31d0</span> <span class="nv">|</span>
+<span class="nv">+-----+----------+</span>
+<span class="nv">POFTHEDAY&gt; (teddy/data-frame:slice *d*</span>
+<span class="nv">            :columns &#39;(&quot;idx&quot; &quot;gaussian&quot;)</span>
+<span class="nv">            :from 4</span>
+<span class="nv">            :to 6)</span>
+<span class="nv">+-----+----------+</span>
+<span class="nv">|</span> <span class="nv">Idx</span> <span class="nv">| Gaussian |</span>
+<span class="nv">+-----+----------+</span>
+<span class="nv">|   4 |</span>   <span class="mf">4.72d0</span> <span class="nv">|</span>
+<span class="nv">|</span>   <span class="mi">5</span> <span class="nv">|   4.73d0 |</span>
+<span class="nv">+-----+----------+</span>
+</pre></div>
+
+
+<h1>Analyzing data</h1>
+
+<p>Also, we might want to see some descriptive statistical data about our
+data frame. This is pretty easy with Teddy:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/stats:stats</span> <span class="vg">*d*</span><span class="p">)</span>
+<span class="nv">+----------------+--------+--------+--------+--------+--------+-------+-------+---------+</span>
+<span class="nv">| Column         |</span> <span class="nv">Min</span>    <span class="nv">| p25    |</span> <span class="nv">p50</span>    <span class="nv">| p75    |</span> <span class="nv">Max</span>    <span class="nv">| Mean  |</span> <span class="nv">SD</span>    <span class="nv">| Sum     |</span>
+<span class="nv">+----------------+--------+--------+--------+--------+--------+-------+-------+---------+</span>
+<span class="nv">| Idx            |</span>      <span class="mi">0</span> <span class="nv">|      2 |</span>   <span class="mf">4.50</span> <span class="nv">|      7 |</span>      <span class="mi">9</span> <span class="nv">|  4.50 |</span>  <span class="mf">3.03</span> <span class="nv">|      45 |</span>
+<span class="nv">| Integers       |</span>      <span class="mi">1</span> <span class="nv">|      8 |</span>  <span class="mf">41.50</span> <span class="nv">|     79 |</span>     <span class="mi">98</span> <span class="nv">| 43.00 |</span> <span class="mf">34.40</span> <span class="nv">|     430 |</span>
+<span class="nv">| Uniform floats |</span>   <span class="mf">0.04</span> <span class="nv">|   0.08 |</span>   <span class="mf">0.38</span> <span class="nv">|   0.60 |</span>   <span class="mf">0.86</span> <span class="nv">|  0.38 |</span>  <span class="mf">0.27</span> <span class="nv">|    3.75 |</span>
+<span class="nv">| Gaussian       |</span> <span class="mf">4.72d0</span> <span class="nv">| 4.87d0 |</span> <span class="mf">4.93d0</span> <span class="nv">| 5.15d0 |</span> <span class="mf">5.31d0</span> <span class="nv">|  4.99 |</span>  <span class="mf">0.20</span> <span class="nv">| 49.88d0 |</span>
+<span class="nv">+----------------+--------+--------+--------+--------+--------+-------+-------+---------+</span>
+</pre></div>
+
+
+<p>Probably, we can make some extandable protocol to calculate other
+properties.</p>
+
+<h1>Iteration over rows</h1>
+
+<p>Data frame stores data as columns. Each column is a vector of particular
+type. If you want to process a row, you can create an iterator and use
+it to go through rows like that:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nb">loop</span> <span class="nv">with</span> <span class="nv">iterator</span> <span class="nb">=</span> <span class="p">(</span><span class="nv">teddy/data-frame:make-iterator</span> <span class="vg">*d*</span><span class="p">)</span>
+                 <span class="nv">for</span> <span class="nv">row</span> <span class="nb">=</span> <span class="p">(</span><span class="nb">funcall</span> <span class="nv">iterator</span><span class="p">)</span>
+                 <span class="nv">while</span> <span class="nv">row</span>
+                 <span class="nb">do</span> <span class="p">(</span><span class="nb">format</span> <span class="no">t</span> <span class="s">&quot;Row: ~S~%&quot;</span>
+                            <span class="nv">row</span><span class="p">))</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">0</span> <span class="mi">41</span> <span class="mf">0.26806116</span> <span class="mf">4.887522971759381d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">1</span> <span class="mi">98</span> <span class="mf">0.081421256</span> <span class="mf">4.928584134866222d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">2</span> <span class="mi">8</span> <span class="mf">0.45165908</span> <span class="mf">5.147222819038834d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">3</span> <span class="mi">56</span> <span class="mf">0.62647486</span> <span class="mf">4.874349648519968d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">4</span> <span class="mi">79</span> <span class="mf">0.41671002</span> <span class="mf">4.7239718274963485d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">5</span> <span class="mi">19</span> <span class="mf">0.04152584</span> <span class="mf">4.727268395019779d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">6</span> <span class="mi">1</span> <span class="mf">0.3369373</span> <span class="mf">4.93339303609316d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">7</span> <span class="mi">79</span> <span class="mf">0.59791017</span> <span class="mf">5.2466443304900965d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">8</span> <span class="mi">42</span> <span class="mf">0.076958776</span> <span class="mf">5.103448455243024d0</span><span class="p">)</span>
+<span class="nv">Row:</span> <span class="p">(</span><span class="mi">9</span> <span class="mi">7</span> <span class="mf">0.85732913</span> <span class="mf">5.310498824093041d0</span><span class="p">)</span>
+</pre></div>
+
+
+<h1>Plotting data</h1>
+
+<p>Plotting facilities as rudimentary. All functions related to plotting
+are in the ~teddy/plot~ package. Right now ~GNUPlot~ is used via
+<a href="http://quickdocs.org/eazy-gnuplot/" >eazy-gnuplot</a> library.</p>
+
+<p>Here is how we can plot our data from all columns:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/plot:plot</span> <span class="vg">*d*</span>
+            <span class="s">&quot;docs/media/0099/simple-plot.png&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img src="docs/simple-plot.png" alt="" /></p>
+
+<p>If we want to plot only gaussian, then it will be wrong, because we need
+histogram type of plot. This it &quot;to be done&quot;:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/plot:plot</span>
+            <span class="p">(</span><span class="nv">teddy/data-frame:slice</span> <span class="vg">*d*</span>
+                                    <span class="ss">:columns</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;Idx&quot;</span> <span class="s">&quot;Gaussian&quot;</span><span class="p">))</span>
+            <span class="s">&quot;docs/media/0099/gaussian.png&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img src="docs/gaussian.png" alt="" /></p>
+
+<p>Another type of plots ~Teddy~ is able to render right now is a
+&quot;timeseries&quot;:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nb">defparameter</span> <span class="vg">*moscow-population*</span>
+             <span class="p">(</span><span class="nv">teddy/data-frame:make-data-frame</span>
+              <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;Date&quot;</span> <span class="s">&quot;Population&quot;</span><span class="p">)</span>
+              <span class="ss">:rows</span> <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;1350-01-01&quot;</span> <span class="mi">30000</span><span class="p">)</span>
+                      <span class="p">(</span><span class="s">&quot;1840-01-01&quot;</span> <span class="mi">349000</span><span class="p">)</span>
+                      <span class="p">(</span><span class="s">&quot;1907-01-01&quot;</span> <span class="mi">1345700</span><span class="p">)</span>
+                      <span class="p">(</span><span class="s">&quot;1967-01-01&quot;</span> <span class="mi">6422000</span><span class="p">)</span>
+                      <span class="p">(</span><span class="s">&quot;1994-01-01&quot;</span> <span class="mi">9066000</span><span class="p">)</span>
+                      <span class="p">(</span><span class="s">&quot;2010-01-01&quot;</span> <span class="mi">11500000</span><span class="p">)</span>
+                      <span class="p">(</span><span class="s">&quot;2020-01-01&quot;</span> <span class="mi">12680000</span><span class="p">))))</span>
+<span class="vg">*MOSCOW-POPULATION*</span>
+<span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/plot:plot-timeseries</span>
+            <span class="vg">*moscow-population*</span> <span class="s">&quot;docs/media/0099/moscow2.png&quot;</span>
+            <span class="ss">:title</span> <span class="s">&quot;Moscow population&quot;</span><span class="p">)</span>
+<span class="s">&quot;docs/media/0099/moscow.png&quot;</span>
+</pre></div>
+
+
+<p><img src="docs/moscow.png" alt="" /></p>
+
+<p>Join the effort to make Teddy really useful for data analysis!</p>
+
+<p>Right now, Teddy installable only from Ultralisp, because it is the best
+place to host unstable fast changing Common Lisp libraries.</p>
+
+<h1>Credentials</h1>
+
+<ul>
+<li>Logo is by <a href="https://pixabay.com/users/jendigitalart-6490932/?tab=about" >JenDigitalArt</a>, was downloaded <a href="https://pixabay.com/illustrations/bear-cute-bear-cartoon-adorable-3189349/" >from Pixabay</a>.</li>
+</ul>
 
   </div>
   
@@ -145,7 +302,7 @@
 <h3>Package: TEDDY/DATA-FRAME</h3>
 <h4>Classes</h4>
 <div>
-  <h5 id="teddy-data-frame:data-frame-4">
+  <h5 id="teddy-data-frame::data-frame-4">
   data-frame
   </h5>
   <p>
@@ -154,15 +311,7 @@
   </div>
 <h4>Functions</h4>
 <div>
-  <h5 id="teddy-data-frame:as-list-5">
-  as-list <span class="lambda-parameters"><span class="parenthesis">(</span> vector <span class="parenthesis">)</span></span>
-  </h5>
-  <p>
-  
-  </p>
-  </div>
-<div>
-  <h5 id="teddy-data-frame:column-idx-6">
+  <h5 id="teddy-data-frame::column-idx-5">
   column-idx <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame name <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -171,7 +320,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:get-column-7">
+  <h5 id="teddy-data-frame::get-column-6">
   get-column <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame name <span class="symbol">&key</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> as <span class="keyword">:vector</span> <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -180,7 +329,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:head-8">
+  <h5 id="teddy-data-frame::head-7">
   head <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="symbol">&optional</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> rows 10 <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -188,7 +337,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:make-data-frame-9">
+  <h5 id="teddy-data-frame::make-data-frame-8">
   make-data-frame <span class="lambda-parameters"><span class="parenthesis">(</span> column-names <span class="symbol">&key</span> rows columns types <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -196,7 +345,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:make-iterator-10">
+  <h5 id="teddy-data-frame::make-iterator-9">
   make-iterator <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -209,7 +358,15 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:num-columns-11">
+  <h5 id="teddy-data-frame::make-value-formatter-10">
+  make-value-formatter <span class="lambda-parameters"><span class="parenthesis">(</span> num-digits-after-point <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame::num-columns-11">
   num-columns <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -217,7 +374,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:num-rows-12">
+  <h5 id="teddy-data-frame::num-rows-12">
   num-rows <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -225,7 +382,15 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:slice-13">
+  <h5 id="teddy-data-frame:set-num-digits-after-point-13">
+  set-num-digits-after-point <span class="lambda-parameters"><span class="parenthesis">(</span> num <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-data-frame::slice-14">
   slice <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="symbol">&key</span> columns from to <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -233,7 +398,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-data-frame:tail-14">
+  <h5 id="teddy-data-frame::tail-15">
   tail <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="symbol">&optional</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> rows 10 <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -242,7 +407,7 @@
   </div>
 <h4>Generic-function-node</h4>
 <div>
-  <h5 id="teddy-data-frame:scalar-15">
+  <h5 id="teddy-data-frame::scalar-16">
   scalar <span class="lambda-parameters"><span class="parenthesis">(</span> obj row-idx column-name <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -252,7 +417,7 @@
   </div>
 <h4>Methods</h4>
 <div>
-  <h5 id="teddy-data-frame:scalar-16">
+  <h5 id="teddy-data-frame::scalar-17">
   scalar <span class="lambda-parameters"><span class="parenthesis">(</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> data-frame data-frame <span class="parenthesis"> <span class="parenthesis">)</span></span></span> row-idx column-name <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -263,7 +428,7 @@
 <h3>Package: TEDDY/INDEX</h3>
 <h4>Classes</h4>
 <div>
-  <h5 id="teddy-index::index-17">
+  <h5 id="teddy-index::index-18">
   index
   </h5>
   <p>
@@ -272,7 +437,7 @@
   </div>
 <h4>Functions</h4>
 <div>
-  <h5 id="teddy-index:make-index-18">
+  <h5 id="teddy-index:make-index-19">
   make-index <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame column <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -280,7 +445,7 @@
   </p>
   </div>
 <div>
-  <h5 id="teddy-index::row-index-19">
+  <h5 id="teddy-index::row-index-20">
   row-index <span class="lambda-parameters"><span class="parenthesis">(</span> index value <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -290,7 +455,7 @@
   </div>
 <h4>Methods</h4>
 <div>
-  <h5 id="teddy-index:scalar-20">
+  <h5 id="teddy-index:scalar-21">
   scalar <span class="lambda-parameters"><span class="parenthesis">(</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> index index <span class="parenthesis"> <span class="parenthesis">)</span></span></span> value column-name <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -301,7 +466,7 @@
 <h3>Package: TEDDY/STATS</h3>
 <h4>Functions</h4>
 <div>
-  <h5 id="teddy-stats:stats-21">
+  <h5 id="teddy-stats:stats-22">
   stats <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame <span class="parenthesis">)</span></span>
   </h5>
   <p>
@@ -314,19 +479,31 @@
 <h3>Package: TEDDY/PLOT</h3>
 <h4>Functions</h4>
 <div>
-  <h5 id="teddy-plot:plot-22">
-  plot <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame output <span class="symbol">&key</span> title debug <span class="parenthesis">)</span></span>
+  <h5 id="teddy-plot::filename-&gt;terminal-23">
+  filename->terminal <span class="lambda-parameters"><span class="parenthesis">(</span> filename <span class="parenthesis">)</span></span>
+  </h5>
+  <p>
+  <p>Transforms string or pathname into a list suitable for passing
+   as :terminal value to eazy-gnuplot:gp-setup.</p>
+
+  </p>
+  </div>
+<div>
+  <h5 id="teddy-plot:plot-24">
+  plot <span class="lambda-parameters"><span class="parenthesis">(</span> data-frame filename <span class="symbol">&key</span> title debug <span class="parenthesis">)</span></span>
   </h5>
   <p>
   
   </p>
   </div>
 <div>
-  <h5 id="teddy-plot:plot-timeseries-23">
-  plot-timeseries <span class="lambda-parameters"><span class="parenthesis">(</span> dataframe output <span class="symbol">&key</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> x "date" <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> y "prof .25" <span class="parenthesis"> <span class="parenthesis">)</span></span></span> <span class="parenthesis">)</span></span>
+  <h5 id="teddy-plot:plot-timeseries-25">
+  plot-timeseries <span class="lambda-parameters"><span class="parenthesis">(</span> dataframe filename <span class="symbol">&key</span> <span class="lambda-parameters"><span class="parenthesis"><span class="parenthesis">(</span> </span> x "date" <span class="parenthesis"> <span class="parenthesis">)</span></span></span> y title <span class="parenthesis">)</span></span>
   </h5>
   <p>
-  
+  <p>Plots a timeseries where axis x has a timestamp values.
+   If column for axis y is not given, then second column will be used.</p>
+
   </p>
   </div>
 

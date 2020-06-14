@@ -12,27 +12,28 @@
                 #:fmt)
   (:import-from #:teddy/utils
                 #:vector-to-list))
-(in-package teddy/data-frame)
+(in-package #:teddy/data-frame)
 
 
-(def function make-value-formatter (num-digits-after-point)
-  (let ((single-float-pattern
-          (fmt "~~,~AF"
-               num-digits-after-point))
-        (double-float-pattern
-          (fmt "~~,~AFd0"
-               num-digits-after-point))
-        (ratio-pattern
-          (fmt "~~,~AF"
-               num-digits-after-point)))
-    (fn value-formatter (value)
-      (format nil
-              (typecase value
-                (single-float single-float-pattern)
-                (double-float double-float-pattern)
-                (ratio ratio-pattern)
-                (t "~A"))
-              value))))
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (def function make-value-formatter (num-digits-after-point)
+    (let ((single-float-pattern
+            (fmt "~~,~AF"
+                 num-digits-after-point))
+          (double-float-pattern
+            (fmt "~~,~AFd0"
+                 num-digits-after-point))
+          (ratio-pattern
+            (fmt "~~,~AF"
+                 num-digits-after-point)))
+      (fn value-formatter (value)
+        (format nil
+                (typecase value
+                  (single-float single-float-pattern)
+                  (double-float double-float-pattern)
+                  (ratio ratio-pattern)
+                  (t "~A"))
+                value)))))
 
 
 (def global-variable *value-formatter*
