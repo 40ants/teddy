@@ -1,5 +1,9 @@
 (defsystem "teddy"
+  :name "teddy"
+  :description "A data framework for Common Lisp, wanna be like Pandas for Python."
   :class :package-inferred-system
+  :author "Alexander Artemenko <svetlyak.40wt@gmail.com>"
+  :license "UNLICENSE"
   :pathname "src"
   :defsystem-depends-on ("asdf-finalizers")
   :depends-on ("teddy/data-frame"
