@@ -13,9 +13,9 @@
       (sh "qlot exec sblint"))
 
 
-(task "build-docs" ()
+(task "docs" ()
       (sh "qlot exec ros run --eval '(push \"../litterae/\" asdf:*central-registry*)' --eval '(ql:quickload :litterae)' --eval '(litterae:generate :teddy :path \"docs/\")' --quit"))
 
 
-(task "default" ("build-docs")
+(task "default" ("lint" "docs")
       ())

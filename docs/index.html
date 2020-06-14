@@ -217,7 +217,7 @@ it to go through rows like that:</p><div class="highlight"><pre><span></span><sp
 <h1>Plotting data</h1>
 
 <p>Plotting facilities as rudimentary. All functions related to plotting
-are in the ~teddy/plot~ package. Right now ~GNUPlot~ is used via
+are in the <code>teddy/plot</code> package. Right now <code>GNUPlot</code> is used via
 <a href="http://quickdocs.org/eazy-gnuplot/" >eazy-gnuplot</a> library.</p>
 
 <p>Here is how we can plot our data from all columns:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/plot:plot</span> <span class="vg">*d*</span>
@@ -225,7 +225,8 @@ are in the ~teddy/plot~ package. Right now ~GNUPlot~ is used via
 </pre></div>
 
 
-<p><img src="docs/simple-plot.png" alt="" /></p>
+<p><img src="simple-plot.png" alt="" />
+<img src="docs/simple-plot.png" alt="" /></p>
 
 <p>If we want to plot only gaussian, then it will be wrong, because we need
 histogram type of plot. This it &quot;to be done&quot;:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nv">teddy/plot:plot</span>
@@ -235,9 +236,10 @@ histogram type of plot. This it &quot;to be done&quot;:</p><div class="highlight
 </pre></div>
 
 
-<p><img src="docs/gaussian.png" alt="" /></p>
+<p><img src="gaussian.png" alt="" />
+<img src="docs/gaussian.png" alt="" /></p>
 
-<p>Another type of plots ~Teddy~ is able to render right now is a
+<p>Another type of plots <code>Teddy</code> is able to render right now is a
 &quot;timeseries&quot;:</p><div class="highlight"><pre><span></span><span class="nv">POFTHEDAY&gt;</span> <span class="p">(</span><span class="nb">defparameter</span> <span class="vg">*moscow-population*</span>
              <span class="p">(</span><span class="nv">teddy/data-frame:make-data-frame</span>
               <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;Date&quot;</span> <span class="s">&quot;Population&quot;</span><span class="p">)</span>
@@ -256,7 +258,8 @@ histogram type of plot. This it &quot;to be done&quot;:</p><div class="highlight
 </pre></div>
 
 
-<p><img src="docs/moscow.png" alt="" /></p>
+<p><img src="moscow.png" alt="" />
+<img src="docs/moscow.png" alt="" /></p>
 
 <p>Join the effort to make Teddy really useful for data analysis!</p>
 
