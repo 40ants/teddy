@@ -10,7 +10,8 @@
                "teddy/index"
                "teddy/stats"
                "teddy/print"
-               "teddy/plot")
+               "teddy/plot"
+	       "teddy/query")
   :around-compile "asdf-finalizers:check-finalizers-around-compile")
 
 (register-system-packages "cl-ascii-table" '(#:ascii-table))
