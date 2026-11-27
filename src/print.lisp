@@ -11,7 +11,8 @@
                 #:fn
                 #:fmt)
   (:import-from #:teddy/utils
-                #:vector-to-list))
+                #:vector-to-list)
+  (:export #:make-data-frame))
 (in-package #:teddy/data-frame)
 
 
