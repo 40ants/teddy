@@ -21,7 +21,8 @@
                 #:infer-type
                 #:vector-to-list)
   (:import-from #:hu.dwim.def
-                #:global-variable))
+                #:global-variable)
+  (:export #:make-data-frame))
 (in-package teddy/data-frame)
 
 
